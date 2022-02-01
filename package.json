@@ -16,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/AliaksandrBelavus/MobileWeb/issues"
   },
-  "homepage": "https://github.com/AliaksandrBelavus/MobileWeb#readme",
-  "devDependencies": {
-    "mocha": "^9.2.0",
-    "protractor": "^7.0.0",
-    "selenium-webdriver": "^4.1.1"
-  }
+  "homepage": "https://github.com/AliaksandrBelavus/MobileWeb#readme"
 }

@@ -1,20 +1,19 @@
 exports.config = {
+  seleniumAddress: "http://127.0.0.1:4723/wd/hub",
 
-    seleniumAddress: 'http://localhost:4723/wd/hub',
+  capabilities: {
+    browserName: "chrome",
+    platformName: "Android",
+    deviceName: "myDevice",
+  },
 
-    capabilities: {
-        browserName: 'chrome',
-        platformName: 'Android',
-        deviceName: 'myDevice'
-    },
+  specs: ["../specs/*.js"],
 
-    specs: ['test/specs/spec.js'],
+  onPrepare: () => {
+    browser.waitForAngularEnabled(false);
+  },
 
-    onPrepare: () => {
-        browser.waitForAngularEnabled(false);
-    },
-
-    jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000
-    }
-}
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 30000,
+  },
+};
